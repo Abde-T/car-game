@@ -1,0 +1,11 @@
+Model Information:
+* title:	Modular City Environment
+* source:	https://sketchfab.com/3d-models/modular-city-environment-595cb232e26d4e65ab93af82bdcefaa4
+* author:	Spicy_EJ (https://sketchfab.com/Spicy_EJ)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Modular City Environment" (https://sketchfab.com/3d-models/modular-city-environment-595cb232e26d4e65ab93af82bdcefaa4) by Spicy_EJ (https://sketchfab.com/Spicy_EJ) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

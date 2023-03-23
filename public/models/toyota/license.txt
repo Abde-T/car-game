@@ -1,0 +1,11 @@
+Model Information:
+* title:	1996 Toyota MR2 W20
+* source:	https://sketchfab.com/3d-models/1996-toyota-mr2-w20-f66020ee62d741ebb0adc1ba351300db
+* author:	_Sheep19 (https://sketchfab.com/shobhit190401)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "1996 Toyota MR2 W20" (https://sketchfab.com/3d-models/1996-toyota-mr2-w20-f66020ee62d741ebb0adc1ba351300db) by _Sheep19 (https://sketchfab.com/shobhit190401) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
