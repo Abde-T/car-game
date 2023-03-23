@@ -1,22 +1,12 @@
 import { useEffect, useState } from "react";
-import * as THREE from 'three';
 
 export const useControls = (vehicleApi, chassisApi) => {
-  //const el = document.getElementById("canvas");
+  const btnW = document.getElementById("w")
 
-  const listener = new THREE.AudioListener();
-  const sound = new THREE.Audio( listener );
-  
-  const audioLoader = new THREE.AudioLoader();
 
   
   let [controls, setControls] = useState({
-    // w: boolean,   
-    // a: boolean,   
-    // s: boolean,   
-    // d: boolean,   
-
-    // r: boolean,   
+   
   });
   
   useEffect(() => {
@@ -34,8 +24,7 @@ export const useControls = (vehicleApi, chassisApi) => {
       }));
     }
     
-
-    
+  
 
 
     window.addEventListener("keydown", keyDownPressHandler);
@@ -51,7 +40,7 @@ export const useControls = (vehicleApi, chassisApi) => {
 
   
   useEffect(() => {
-    if (controls.w ) {
+    if (controls.w || controls.btnW ) {
       vehicleApi.applyEngineForce(1500, 2);
       vehicleApi.applyEngineForce(1500, 3);
    {/*   audioLoader.load( process.env.PUBLIC_URL + 'Audio/car.mp3', function( buffer ) {
