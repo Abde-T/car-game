@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
 
-export const useControls = (vehicleApi, chassisApi) => {
-  const btnW = document.getElementById("w")
+export const useControls = (vehicleApi, chassisApi) => {  
+  let [controls, setControls] = useState({});
 
 
-  
-  let [controls, setControls] = useState({
-   
-  });
-  
+
+
   useEffect(() => {
     const keyDownPressHandler = (e) => {
       setControls((controls) => ({ 
@@ -23,8 +20,6 @@ export const useControls = (vehicleApi, chassisApi) => {
         [e.key.toLowerCase()]: false 
       }));
     }
-    
-  
 
 
     window.addEventListener("keydown", keyDownPressHandler);
@@ -40,15 +35,10 @@ export const useControls = (vehicleApi, chassisApi) => {
 
   
   useEffect(() => {
-    if (controls.w || controls.btnW ) {
+    if (controls.w) {
       vehicleApi.applyEngineForce(1500, 2);
       vehicleApi.applyEngineForce(1500, 3);
-   {/*   audioLoader.load( process.env.PUBLIC_URL + 'Audio/car.mp3', function( buffer ) {
-        sound.setBuffer( buffer );
-        sound.setLoop( true );
-        sound.setVolume( 0.2 );
-        sound.stop();
-      });*/}
+      
     } else if (controls.s) {
       vehicleApi.applyEngineForce(-1000, 2);
       vehicleApi.applyEngineForce(-1000, 3);

@@ -10,10 +10,14 @@ function App() {
     setLoading(false);
     setTimeout(() => {
       setLoading(true);
-    }, 2000);
+    }, 1700);
   }, []);
 
-
+ 
+  const Alert = () => {
+    alert("Feature not implemented; please play on desktop/laptop to enjoy the whole experience");
+   
+  }
 
   return (
     <>
@@ -32,61 +36,28 @@ function App() {
             <p>press arrows for flips</p>
           </div>
 
-          <div className="mobile_controls">
-            <button id="w">W</button>
+          <div className="mobile_controls" >
+            <button id="w" onClick={Alert}>W</button>
             <div className="cnt">
-              <button id="a">A</button>
-              <button id="s">S</button>
-              <button id="d">D</button>
+              <button id="a" onClick={Alert}>A</button>
+              <button id="s" onClick={Alert}>S</button>
+              <button id="d" onClick={Alert}>D</button>
             </div>
           </div>
 
           <div className="air_controls ">
-            <button id="up">↑</button>
+            <button id="up" onClick={Alert}>↑</button>
             <div className="cnt">
-              <button id="left">←</button>
-              <button id="down">↓</button>
-              <button id="right">→</button>
+              <button id="left" onClick={Alert}>←</button>
+              <button id="down" onClick={Alert}>↓</button>
+              <button id="right" onClick={Alert}>→</button>
             </div>
           </div>
         </>
       ) : (
-        <div className="canvas">
-   <div className="hexagon">
-      <div className="row">
-         <div className="arrow up outer outer-18"></div>
-         <div className="arrow down outer outer-17"></div>
-         <div className="arrow up outer outer-16"></div>
-         <div className="arrow down outer outer-15"></div>
-         <div className="arrow up outer outer-14"></div>
+        <div className="ring">Loading
+        <span></span>
       </div>
-      <div className="row">
-         <div className="arrow up outer outer-1"></div>
-         <div className="arrow down outer outer-2"></div>
-         <div className="arrow up inner inner-6"></div>
-         <div className="arrow down inner inner-5"></div>
-         <div className="arrow up inner inner-4"></div>
-         <div className="arrow down outer outer-13"></div>
-         <div className="arrow up outer outer-12"></div>
-      </div>
-      <div className="row">
-         <div className="arrow down outer outer-3"></div>
-         <div className="arrow up outer outer-4"></div>
-         <div className="arrow down inner inner-1"></div>
-         <div className="arrow up inner inner-2"></div>
-         <div className="arrow down inner inner-3"></div>
-         <div className="arrow up outer outer-11"></div>
-         <div className="arrow down outer outer-10"></div>
-      </div>
-      <div className="row">
-         <div className="arrow down outer outer-5"></div>
-         <div className="arrow up outer outer-6"></div>
-         <div className="arrow down outer outer-7"></div>
-         <div className="arrow up outer outer-8"></div>
-         <div className="arrow down outer outer-9"></div>
-      </div>
-   </div>
-</div>
       )}
     </>
   );

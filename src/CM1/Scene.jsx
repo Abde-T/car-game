@@ -9,24 +9,8 @@ import { Car } from "./Car";
 import { Ground } from "./Ground";
 import { Track } from "./Track";
 import { Map } from "./Map";
-import * as THREE from 'three';
-
-
 
 function Scene(props) {
-
-  const listener = new THREE.AudioListener();
-  const sound = new THREE.Audio( listener );
-
-const audioLoader = new THREE.AudioLoader();
-{/*audioLoader.load( process.env.PUBLIC_URL + 'Audio/atmosphere.mp3', function( buffer ) {
-	sound.setBuffer( buffer );
-	sound.setLoop( true );
-	sound.setVolume( 1 );
-	sound.stop();
-});*/}
-
-
   const [thirdPerson, setThirdPerson] = useState(false);
   const [cameraPosition, setCameraPosition] = useState([-250, 150, -150]);
   useEffect(() => {
