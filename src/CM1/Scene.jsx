@@ -13,15 +13,16 @@ import { Map } from "./Map";
 function Scene(props) {
   const [thirdPerson, setThirdPerson] = useState(false);
   const [cameraPosition, setCameraPosition] = useState([-250, 150, -150]);
-  useEffect(() => {
-    function keydownHandler(e) {
-      if (e.key == "k") {
-        if (thirdPerson)
-          setCameraPosition([-320, 150, -150 + Math.random() * 0.01]);
-        setThirdPerson(!thirdPerson);
-      }
+  
+useEffect(() => {
+  function keydownHandler(e) {
+    if (e.key == "k") {
+      if (thirdPerson)
+      setCameraPosition([-320, 150, -150 + Math.random() * 0.01]);
+      setThirdPerson(!thirdPerson);
     }
-
+  }
+  
     window.addEventListener("keydown", keydownHandler);
     return () => window.removeEventListener("keydown", keydownHandler);
   }, [thirdPerson]);
@@ -34,7 +35,7 @@ function Scene(props) {
       <PerspectiveCamera makeDefault position={cameraPosition} fov={60} />
       {!thirdPerson && <OrbitControls target={[50, 0, 150]} />}
      
-      <Stats/>
+      
       <Track />
       <Map/>
       <Ground />

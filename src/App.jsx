@@ -3,6 +3,7 @@ import "./index.css";
 import { Canvas } from "@react-three/fiber";
 import { Physics } from "@react-three/cannon";
 import Scene from "./CM1/Scene";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -13,7 +14,7 @@ function App() {
     }, 1700);
   }, []);
 
- 
+
   const Alert = () => {
     alert("Feature not implemented; please play on desktop/laptop to enjoy the whole experience");
    
@@ -37,22 +38,28 @@ function App() {
           </div>
 
           <div className="mobile_controls" >
-            <button id="w" onClick={Alert}>W</button>
+            <button id="w" >W</button>
             <div className="cnt">
-              <button id="a" onClick={Alert}>A</button>
-              <button id="s" onClick={Alert}>S</button>
-              <button id="d" onClick={Alert}>D</button>
+              <button id="a" >A</button>
+              <button id="s" >S</button>
+              <button id="d" >D</button>
             </div>
           </div>
 
           <div className="air_controls ">
-            <button id="up" onClick={Alert}>↑</button>
+            <button id="up" >↑</button>
             <div className="cnt">
-              <button id="left" onClick={Alert}>←</button>
-              <button id="down" onClick={Alert}>↓</button>
-              <button id="right" onClick={Alert}>→</button>
+              <button id="left" >←</button>
+              <button id="down" >↓</button>
+              <button id="right" >→</button>
             </div>
           </div>
+
+        <div className="cntrls">
+          <FontAwesomeIcon icon='repeat' id='reset' className="icon" />
+          <FontAwesomeIcon icon='camera' id='camera' className="icon"/>
+
+        </div>
         </>
       ) : (
         <div className="ring">Loading

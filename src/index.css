@@ -132,7 +132,7 @@ span:before
     width: 50px;
     height: 50px;
   }
-  button:active{
+  button:active, .icon:active{
     background-color: rgba(245, 222, 179, 0.514);
   }
   .mobile_controls{
@@ -163,5 +163,18 @@ span:before
   display: flex;
   flex-direction: column;
   align-items: center;
+  }
+  .cntrls{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .icon{
+    color: rgba(0, 0, 0, 0.712);
+    font-size: 30px;
+    margin:  0 10px;
   }
 }
