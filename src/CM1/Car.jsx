@@ -55,7 +55,7 @@ export function Car({ thirdPerson }) {
 
 
   useFrame((state) => {
-    if (!thirdPerson) return;
+    if (thirdPerson) return;
 
     let position = new Vector3(0, 0, 0);
     position.setFromMatrixPosition(chassisBody.current.matrixWorld);

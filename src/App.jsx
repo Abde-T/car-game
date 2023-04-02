@@ -32,7 +32,7 @@ function App() {
         <>
           <div className="controls display_non">
             <p>press w a s d to move</p>
-            <p>press k to swap camera</p>
+            <p>press k to use free camera</p>
             <p>press r to reset</p>
             <p>press arrows for flips</p>
           </div>
@@ -57,8 +57,6 @@ function App() {
 
         <div className="cntrls">
           <FontAwesomeIcon icon='repeat' id='reset' className="icon" />
-          <FontAwesomeIcon icon='camera' id='camera' className="icon"/>
-
         </div>
         </>
       ) : (

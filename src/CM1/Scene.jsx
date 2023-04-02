@@ -13,8 +13,9 @@ import { Map } from "./Map";
 function Scene(props) {
   const [thirdPerson, setThirdPerson] = useState(false);
   const [cameraPosition, setCameraPosition] = useState([-250, 150, -150]);
+
   
-useEffect(() => {
+  useEffect(() => {
   function keydownHandler(e) {
     if (e.key == "k") {
       if (thirdPerson)
@@ -22,10 +23,9 @@ useEffect(() => {
       setThirdPerson(!thirdPerson);
     }
   }
-  
-    window.addEventListener("keydown", keydownHandler);
-    return () => window.removeEventListener("keydown", keydownHandler);
-  }, [thirdPerson]);
+  window.addEventListener("keydown", keydownHandler);
+  return () => window.removeEventListener("keydown", keydownHandler);
+  }, [!thirdPerson]);
   return (
     <Suspense fallback={null}>
       <Environment
@@ -33,7 +33,7 @@ useEffect(() => {
         background={"both"}
       />
       <PerspectiveCamera makeDefault position={cameraPosition} fov={60} />
-      {!thirdPerson && <OrbitControls target={[50, 0, 150]} />}
+      {thirdPerson && <OrbitControls target={[0, 0, 0]} /> }
      
       
       <Track />

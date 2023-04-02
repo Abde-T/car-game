@@ -5,7 +5,7 @@ export const useControls = (vehicleApi, chassisApi) => {
 
   const btnW = document.getElementById("w");
   btnW.addEventListener("click", forward);
-
+  
   function forward(){
       vehicleApi.applyEngineForce(1500, 2);
       vehicleApi.applyEngineForce(1500, 3);
@@ -23,10 +23,10 @@ export const useControls = (vehicleApi, chassisApi) => {
   btnA.addEventListener("click", left);
 
   function left(){
-      vehicleApi.setSteeringValue(0.55, 2);
-      vehicleApi.setSteeringValue(0.55, 3);
-      vehicleApi.setSteeringValue(-0.1, 0);
-      vehicleApi.setSteeringValue(-0.1, 1);
+    vehicleApi.setSteeringValue(0.55, 2);
+    vehicleApi.setSteeringValue(0.55, 3);
+    vehicleApi.setSteeringValue(-0.1, 0);
+    vehicleApi.setSteeringValue(-0.1, 1);
   }
 
   const btnD = document.getElementById("d");
@@ -56,17 +56,17 @@ export const useControls = (vehicleApi, chassisApi) => {
   }
 
   const btnleft = document.getElementById("left");
-  btnleft.addEventListener("click", left);
+  btnleft.addEventListener("click", flipleft);
 
-  function left(){
+  function flipleft(){
     chassisApi.applyLocalImpulse([0, -5, 0], [-20, 0, 0]);
   
   }
 
   const btnright = document.getElementById("right");
-  btnright.addEventListener("click", right);
+  btnright.addEventListener("click", flipright);
 
-  function right(){
+  function flipright(){
     chassisApi.applyLocalImpulse([0, -5, 0], [+20, 0, 0]);
   }
 
@@ -112,7 +112,7 @@ export const useControls = (vehicleApi, chassisApi) => {
 
   
   useEffect(() => {
-    if (controls.w) {
+    if (controls.w || controls.z) {
       vehicleApi.applyEngineForce(1500, 2);
       vehicleApi.applyEngineForce(1500, 3);
       
@@ -127,7 +127,7 @@ export const useControls = (vehicleApi, chassisApi) => {
       vehicleApi.applyEngineForce(0, 3);
     }
 
-    if (controls.a) {
+    if (controls.a || controls.q) {
       vehicleApi.setSteeringValue(0.55, 2);
       vehicleApi.setSteeringValue(0.55, 3);
       vehicleApi.setSteeringValue(-0.1, 0);
