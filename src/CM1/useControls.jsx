@@ -4,7 +4,9 @@ export const useControls = (vehicleApi, chassisApi) => {
   let [controls, setControls] = useState({});
 
   const btnW = document.getElementById("w");
-  btnW.addEventListener("click", forward);
+  if(btnW){
+    btnW.addEventListener("click", forward);
+  }
   
   function forward(){
       vehicleApi.applyEngineForce(1500, 2);
@@ -12,7 +14,9 @@ export const useControls = (vehicleApi, chassisApi) => {
   }
 
   const btnS = document.getElementById("s");
-  btnS.addEventListener("click", backwards);
+  if(btnS){
+    btnS.addEventListener("click", backwards);
+  }
 
   function backwards(){
       vehicleApi.applyEngineForce(-1000, 2);
@@ -20,7 +24,9 @@ export const useControls = (vehicleApi, chassisApi) => {
   }
 
   const btnA = document.getElementById("a");
-  btnA.addEventListener("click", left);
+  if(btnA){
+    btnA.addEventListener("click", left);
+  }
 
   function left(){
     vehicleApi.setSteeringValue(0.55, 2);
@@ -30,7 +36,9 @@ export const useControls = (vehicleApi, chassisApi) => {
   }
 
   const btnD = document.getElementById("d");
-  btnD.addEventListener("click", right);
+  if(btnD){
+    btnD.addEventListener("click", right);
+  }
 
   function right(){
     vehicleApi.setSteeringValue(-0.55, 2);
@@ -41,14 +49,18 @@ export const useControls = (vehicleApi, chassisApi) => {
 
 
   const btnUp = document.getElementById("up");
-  btnUp.addEventListener("click", up);
+  if(btnUp){
+    btnUp.addEventListener("click", up);
+  }
 
   function up(){
     chassisApi.applyLocalImpulse([0, -5, 0], [0, 0, -20]);
   }
 
   const btndonw = document.getElementById("down");
-  btndonw.addEventListener("click", down);
+  if(btndonw){
+    btndonw.addEventListener("click", down);
+  }
 
   function down(){
     chassisApi.applyLocalImpulse([0, -5, 0], [0, 0, +20]);
@@ -56,7 +68,9 @@ export const useControls = (vehicleApi, chassisApi) => {
   }
 
   const btnleft = document.getElementById("left");
-  btnleft.addEventListener("click", flipleft);
+  if(btnleft){
+    btnleft.addEventListener("click", flipleft);
+  }
 
   function flipleft(){
     chassisApi.applyLocalImpulse([0, -5, 0], [-20, 0, 0]);
@@ -64,14 +78,18 @@ export const useControls = (vehicleApi, chassisApi) => {
   }
 
   const btnright = document.getElementById("right");
-  btnright.addEventListener("click", flipright);
+  if(btnright){
+    btnright.addEventListener("click", flipright);
+  }
 
   function flipright(){
     chassisApi.applyLocalImpulse([0, -5, 0], [+20, 0, 0]);
   }
 
   const reset = document.getElementById('reset')
-  reset.addEventListener("click", Reset)
+  if(reset){
+    reset.addEventListener("click", Reset)
+  }
 
   function Reset(){
       chassisApi.position.set(-90.5, 0, 25);
